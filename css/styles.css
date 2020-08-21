@@ -566,6 +566,10 @@ body {
 
 .modal {
   position: absolute;
+  width: 100%;
+  max-width: 528px;
+  min-height: 581px;
+  padding: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -573,9 +577,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 100%;
-  max-width: 528px;
-  min-height: 581px;
 }
 
 .modal-close {
@@ -593,6 +594,225 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+}
+
+.modal-close:hover,
+.modal-close:focus,
+.modal-close:active {
+  fill: var(--changing-text-color);
+  outline: none;
+}
+
+.modal > h2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.modal .modal-box {
+}
+
+.modal .modal-box:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.comment-box {
+  margin-bottom: 20px;
+}
+
+.modal .modal-label {
+  display: block;
+  margin-bottom: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.box-icon {
+  position: relative;
+}
+
+.modal .modal-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 12px 0 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: var(--primery-text-color);
+}
+
+.modal .modal-input:focus,
+.modal .modal-input:active {
+  fill: var(--changing-text-color);
+  border-color: var(--changing-text-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+}
+
+.person-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.phone-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  padding: 2.5px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.email-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  padding: 1.5px 3px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.person-icon > .person-black {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+}
+
+.phone-icon > .phone-black {
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+}
+
+.email-icon > .email-black {
+  display: inline-flex;
+  width: 15px;
+  height: 12px;
+}
+
+.modal .modal-comment {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.modal-comment::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-comment:focus,
+.modal-comment:active {
+  outline: none;
+  border-color: var(--changing-text-color);
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-left: 12px;
+}
+
+.modal-checkbox > .contract-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.modal-checkbox > .contract-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.contract-input + .contract-label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.contract-input + .contract-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 1px solid var(--primery-text-color);
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contract-input:checked + .contract-label::before {
+  border-color: var(--changing-text-color);
+  background-color: var(--changing-text-color);
+  background-image: url(../image/checkbox.svg);
+}
+
+.contract-label > .contract-label-text {
+  color: var(--changing-text-color);
+}
+
+.modal .modal-button {
+  display: inline-flex;
+  align-items: center;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  margin-left: 124px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: var(--third-text-color);
+  background-color: var(--changing-text-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.modal .modal-button:hover {
+  background-color: #188ce8;
 }
 
 .close {
@@ -747,7 +967,7 @@ body {
 
 .subscription b {
   display: inline-flex;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -759,6 +979,39 @@ body {
 .mailing > p {
   display: inline-flex;
   margin-right: 12px;
+}
+
+.subscription-label {
+  display: block;
+}
+
+.subscription-input {
+  margin-right: 12px;
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscription-input::placeholder {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-button {
