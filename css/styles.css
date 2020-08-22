@@ -594,6 +594,8 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -652,15 +654,31 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   fill: var(--primery-text-color);
+  outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .modal-input:focus,
 .modal .modal-input:active {
-  fill: var(--changing-text-color);
   border-color: var(--changing-text-color);
   box-sizing: border-box;
   border-radius: 4px;
-  outline: none;
+}
+
+.modal .modal-input:focus + .person-icon,
+.modal .modal-input:active + .person-icon {
+  fill: var(--changing-text-color);
+}
+
+.modal .modal-input:focus + .phone-icon,
+.modal .modal-input:active + .phone-icon {
+  fill: var(--changing-text-color);
+}
+
+.modal .modal-input:focus + .email-icon,
+.modal .modal-input:active + .email-icon {
+  fill: var(--changing-text-color);
 }
 
 .person-icon {
@@ -719,6 +737,8 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment::placeholder {
@@ -764,6 +784,8 @@ body {
   display: inline-flex;
   align-items: center;
   user-select: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contract-input + .contract-label::before {
@@ -809,6 +831,9 @@ body {
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .modal-button:hover {
@@ -1001,6 +1026,9 @@ body {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscription-input::placeholder {
